@@ -25,7 +25,7 @@ export class AppController {
   // // Open account from private key
   // @Post('openAccount')
   // openSimpleAccount(@Body() openAccount: OpenAccount) {
-  //   return this.appService.openSimpleAccount(openAccount.privateKey);
+  //   return this.appService.openSimpleAccount(openAccount.privateKeyCosign);
   // }
 
   // Signed aggregate bounded tranaction

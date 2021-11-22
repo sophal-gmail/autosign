@@ -20,8 +20,8 @@ export class AppService {
   transactionHttp: TransactionHttp;
 
   constructor() {
-    this.accountHttp = new AccountHttp('https://arcturus.xpxsirius.io');
-    this.transactionHttp = new TransactionHttp('https://arcturus.xpxsirius.io');
+    this.accountHttp = new AccountHttp(AppConfig.api_URL);
+    this.transactionHttp = new TransactionHttp(AppConfig.api_URL);
     this.network_TYPE = NetworkType[AppConfig.network_TYPE];
   }
 
@@ -66,7 +66,7 @@ export class AppService {
     signedAggregateBoundedTransaction: AggregateTransaction,
   ) {
     const account = Account.createFromPrivateKey(
-      AppConfig.privateKey123,
+      AppConfig.privateKeyCosign,
       this.network_TYPE,
     );
     const cosignAggregateBondedTransaction = (
@@ -115,10 +115,10 @@ export class AppService {
   async setPrivateKey(openAccount) {
     const data = readFileSync('dist/config.json', { encoding: 'utf8' });
     const jsonData = JSON.parse(data);
-    jsonData.privateKey123 = openAccount;
+    jsonData.privateKeyCosign = openAccount;
     const wData = writeFileSync('dist/config.json', JSON.stringify(jsonData));
     console.log('file: app.service.ts ~ line 102 ~ AppService ~ setPrivateKey ~ wData', wData)
-    return jsonData.privateKey123;
+    return jsonData.privateKeyCosign;
   }
 
   async setNodeUrl(url: string) {
