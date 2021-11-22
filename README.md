@@ -23,7 +23,7 @@ Install Node module and build
 ```console
 $ npm i && npm run build
 ```
-## How to install in raspberry pi3 B+
+## Install in raspberry pi3 B+
 
 We use pm2 to manage node project, to install pm2:
 ```console 
