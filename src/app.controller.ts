@@ -2,9 +2,9 @@ import { Body, Controller, Post } from '@nestjs/common';
 // import { Cron, CronExpression } from '@nestjs/schedule';
 import { AppService } from './app.service';
 import {
-  Network_Type,
-  NodeUrl,
-  OpenAccount,
+  // Network_Type,
+  // NodeUrl,
+  // OpenAccount,
   SignedAggBounded,
 } from './models/openAccount';
 
@@ -51,18 +51,18 @@ export class AppController {
     return this.appService.getAggregateBondedTransactionsSign();
   }
 
-  @Post('SetPrivateKey')
-  setPrivateKey(@Body() privateKey: OpenAccount) {
-    return this.appService.setPrivateKey(privateKey.privateKey);
-  }
+  // @Post('SetPrivateKey')
+  // setPrivateKey(@Body() privateKey: OpenAccount) {
+  //   return this.appService.setPrivateKey(privateKey.privateKey);
+  // }
 
-  @Post('SetNodeUrl')
-  setNodeUrl(@Body() nodeUrl: NodeUrl) {
-    return this.appService.setNodeUrl(nodeUrl.url);
-  }
+  // @Post('SetNodeUrl')
+  // setNodeUrl(@Body() nodeUrl: NodeUrl) {
+  //   return this.appService.setNodeUrl(nodeUrl.url);
+  // }
 
-  @Post('SetNetworkType')
-  setNetwork_Type(@Body() networkType: Network_Type) {
-    return this.appService.setNetwork_Type(networkType.network_TYPE);
-  }
+  // @Post('SetNetworkType')
+  // setNetwork_Type(@Body() networkType: Network_Type) {
+  //   return this.appService.setNetwork_Type(networkType.network_TYPE);
+  // }
 }
