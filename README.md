@@ -18,8 +18,8 @@ $ nano ./config.json
 }
 save config file
 ```
-Note:
-    For Testnet env, change:  
+Note:  
+    For Testnet env, change,  
     "api_URL": "https://bctestnet1.brimstone.xpxsirius.io",  
     "network_TYPE": "TEST_NET" when use with  
 
