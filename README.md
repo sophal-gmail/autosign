@@ -38,9 +38,8 @@ C. Install Node module lib to Autosign project, then build the run:!
 ```console
 $ npm i && npm run build
 ```
-## Install in raspberry pi3 B+
-
-We use pm2 to manage node project, to install pm2:
+D. To run the service code:
+We use pm2 (https://pm2.keymetrics.io/) to manage runtime of node's project. To install pm2:
 ```console 
 $ sudo npm install pm2 -g
 ```
@@ -57,26 +56,20 @@ $ nano ./sirius-conf.json
 }
 save config file
 ```
-Run start service pm2 config file by:
+To Start service:
 ```Console
 $ pm2 start ./sirius-conf.json
 ``` 
-We can stop service by issue command :
+To Stop service:
 ```console
 $ pm2 stop Sirius-Autosign
 ```
-We can view pm2 logs :
+We can view service logs :
 ``` console
 $ pm2 logs Sirius-Autosign
 ```
 
-
-Access the node url by:
-```
-<ip>:3000/swagger/
-```
-
-### Generating a Startup Script
+### Startup the Service on Boot for Raspberry Pi:
 To automatically generate and configuration a startup script just type the command (without sudo) pm2 startup:
 <!-- Autostart service in case the host is reboot: -->
 ```console
