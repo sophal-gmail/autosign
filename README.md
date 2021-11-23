@@ -1,7 +1,7 @@
 # Sirius Autosign 
 
 
-A. clone project directory by:
+### A. clone project directory by:
 ```console
 $ cd /home/$USER
 $ git clone https://github.com/sophal-gmail/autosign.git
@@ -23,22 +23,21 @@ Note:
     "api_URL": "https://bctestnet1.brimstone.xpxsirius.io",
     "network_TYPE": "TEST_NET" when use with 
 
-B. If you have not install node_js, follow the instruction to install Node.js:
+### B. If you have not install node_js, follow the instruction to install Node.js:
 https://github.com/nodesource/distributions/blob/master/README.md#deb
 
 Node.js v17.x:
-# Using Debian, as root
 ```console
 curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
 apt-get install -y nodejs
 
 ```
-C. Install Node module lib to Autosign project, then build the run:!
+### C. Install Node module lib to Autosign project, then build the run:!
 
 ```console
 $ npm i && npm run build
 ```
-D. To run the service code:
+### D. To run the service code:
 We use pm2 (https://pm2.keymetrics.io/) to manage runtime of node's project. To install pm2:
 ```console 
 $ sudo npm install pm2 -g
@@ -69,7 +68,7 @@ We can view service logs :
 $ pm2 logs Sirius-Autosign
 ```
 
-### Startup the Service on Boot for Raspberry Pi:
+### E. Startup the Service on Boot for Raspberry Pi:
 To automatically generate and configuration a startup script just type the command (without sudo) pm2 startup:
 <!-- Autostart service in case the host is reboot: -->
 ```console
