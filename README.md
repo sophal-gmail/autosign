@@ -23,7 +23,7 @@ Note:
     "api_URL": "https://bctestnet1.brimstone.xpxsirius.io",
     "network_TYPE": "TEST_NET" when use with 
 
-### B. If you have not install node_js, follow the instruction to install Node.js:
+### B. If you have not install Node.js, follow the instruction:
 https://github.com/nodesource/distributions/blob/master/README.md#deb
 
 Node.js v17.x:
@@ -32,7 +32,7 @@ curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
 apt-get install -y nodejs
 
 ```
-### C. Install Node module lib to Autosign project, then build the run:!
+### C. Install Node module lib to Autosign project, then build the run:
 
 ```console
 $ npm i && npm run build
