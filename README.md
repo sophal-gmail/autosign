@@ -16,8 +16,8 @@ $ nano ./config.json
     "api_URL": "https://arcturus.xpxsirius.io",
     "network_TYPE": "MAIN_NET" 
 }
-```
 save config file
+```
 Note:
     For Testnet env, change:
     "api_URL": "https://bctestnet1.brimstone.xpxsirius.io",
