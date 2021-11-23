@@ -1,25 +1,40 @@
 # Sirius Autosign 
 
 
-clone project directory by:
+A. clone project directory by:
 ```console
 $ cd /home/$USER
 $ git clone https://github.com/sophal-gmail/autosign.git
 $ cd autosign
 ```
-when clone finish, change nessary option in config.json
+when clone finish, change neccessary option in config.json
 ```console
 $ nano ./config.json
 {
-    "privateKeyCosign": "",
-    "publicAccountMultsig": "",
-    "api_URL": "",
-    "network_TYPE": "MAIN_NET" or "TEST_NET"
+    "privateKeyCosign": "your_privatekey",
+    "publicAccountMultsig": "your_multisign_account_address",
+    "api_URL": "https://arcturus.xpxsirius.io",
+    "network_TYPE": "MAIN_NET" 
 }
-
-save config file
 ```
-Install Node module and build 
+save config file
+Note:
+    For Testnet env, change:
+    "api_URL": "https://bctestnet1.brimstone.xpxsirius.io",
+    "network_TYPE": "TEST_NET" when use with 
+
+B. If you have not install node_js, follow the instruction to install Node.js:
+https://github.com/nodesource/distributions/blob/master/README.md#deb
+
+Node.js v17.x:
+# Using Debian, as root
+```console
+curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
+apt-get install -y nodejs
+
+```
+C. Install Node module lib to Autosign project, then build the run:!
+
 ```console
 $ npm i && npm run build
 ```
