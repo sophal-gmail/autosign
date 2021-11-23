@@ -19,9 +19,9 @@ $ nano ./config.json
 save config file
 ```
 Note:
-    For Testnet env, change:
-    "api_URL": "https://bctestnet1.brimstone.xpxsirius.io",
-    "network_TYPE": "TEST_NET" when use with 
+    For Testnet env, change:  
+    "api_URL": "https://bctestnet1.brimstone.xpxsirius.io",  
+    "network_TYPE": "TEST_NET" when use with  
 
 ### B. If you have not install Node.js, follow the instruction:
 https://github.com/nodesource/distributions/blob/master/README.md#deb
